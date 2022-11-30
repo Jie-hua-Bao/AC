@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memorizing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6bfa4f28a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="title">
+        <img src="./img/logo.png" />
+        <h2>Memorizing Game</h2>
+      </div>
+
+      <h2 class="score">Score:0</h2>
+      <p class="tried">You've tried: 0 times</p>
+    </div>
+    <div id="cards">
+      <!-- <div class="card">
+        <p>4</p>
+        <img
+          src="https://assets-lighthouse.alphacamp.co/uploads/image/file/17991/diamonds.png"
+        />
+        <p>4</p>
+      </div> -->
+    </div>
+    <!--voice 2 背景音效  voice 答錯 voice 3答對 voice4 勝利-->
+    <audio src="./voice/1.mp3" autoplay loop class="voice2"></audio>
+    <audio src="./voice/2.mp3" class="voice"></audio>
+    <audio src="./voice/3.mp3" class="voice3"></audio>
+    <audio src="./voice/4.mp3" class="voice4"></audio>
+    <script src="main.js"></script>
+  </body>
+</html>

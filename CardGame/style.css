@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+JP:wght@900&family=Noto+Sans+TC:wght@100;300;400;500;700&family=Roboto:wght@300&family=Silkscreen&display=swap");
+
+body {
+  background: url("./img/005.jpg");
+  background-size: cover;
+  /* height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+#header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+}
+
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  max-width: 3em;
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #f00078;
+}
+
+#header .tried {
+  margin-top: 0;
+  font-family: "Ma Shan Zheng", cursive;
+  font-size: 20px;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* flex-basis、flex-grow、flex-shrink  */
+  flex: 7% 0 1;
+  /*每個item分配在cards裡的寬度*/
+  height: 8vw;
+  /*依視窗的寬度比例變化*/
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background-color: #dae0e3;
+}
+
+.card img {
+  /* 最大寬度30% */
+  max-width: 50%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 20px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url("./img/black.png");
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.back:hover {
+  background: url("./img/red.png");
+  background-size: cover;
+  opacity: 1;
+}
+
+.paired {
+  background-color: bisque;
+  opacity: 0.8;
+  border: 1px solid #000000;
+}
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 20;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid red;
+    background: url("./img/X.png");
+    background-size: cover;
+    opacity: 1;
+    color: red;
+  }
+}
+
+/** Game finished **/
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background: url("./img/money.gif");
+  opacity: 0.7;
+  width: 100vw;
+  padding: 50px 0;
+  background-size: cover;
+}
+
+.completed>p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  /*文字漸層色*/
+  background: linear-gradient(to top, #ffd306, #ffc78e, #f75000);
+  background: -webkit-linear-gradient(to top, #ffd306, #ffc78e, #f75000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.completed>p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: red;
+}
