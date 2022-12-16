@@ -78,7 +78,24 @@ header {
   -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
 }
-
+.nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+.navbar-brand {
+  color: #267b98;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* 與外層Header高度相同達到垂直置中 */
+  line-height: 60px;
+}
+.nav-item {
+  margin: 1.4rem 0;
+}
+.nav-link {
+  color: #267b98;
+}
 /********* 電腦版樣式 *********/
 @media screen and (min-width: 768px) {
   .action {
