@@ -120,18 +120,17 @@ header {
 .hamburger::after {
   position: absolute;
   left: 0;
-  content: '';
+  content: "";
 }
-.hamburger::before{
+.hamburger::before {
   bottom: 8px;
 }
-.hamburger::after{
+.hamburger::after {
   top: 8px;
 }
-.navbar-toggle{
+.navbar-toggle {
   visibility: hidden;
   position: absolute;
-
 }
 .navbar-brand {
   color: #267b98;
@@ -153,5 +152,25 @@ header {
   .action {
     font-size: 1.2rem;
     padding: 0.75rem 2rem;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  .navbar-brand {
+    grid-column: 2/3; 
+  }
+  .navbar-toggle-label {
+    display: none;
+  }
+  /* 導覽列css樣式設定復原 */
+  .nav {
+    all: unset;
+    grid-column: 3 / 4 ;
+  }
+  /* 導覽項目 css樣式設定復原 */
+  .nav-item {
+    margin: 0;
+    opacity: 1;
   }
 }
