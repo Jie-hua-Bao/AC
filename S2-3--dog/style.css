@@ -181,4 +181,26 @@ header {
     align-items: center;
     grid-gap: 2rem;
   }
+  .banner-wrapper {
+    padding-top: 92px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-gap:0.5rem;
+    grid-template-areas:
+      "main main main main"
+      "left left right right";
+  }
+  .main-banner {
+    grid-area: main;
+    background-image: url("./img/main.avif");
+  }
+  .sub-banner-left {
+    grid-area: left;
+    background-image: url("./img/left.avif");
+  }
+  .sub-banner-right {
+    grid-area: right;
+    background-image: url("./img/right.avif");
+  }
 }
