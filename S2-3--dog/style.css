@@ -147,71 +147,66 @@ header {
   color: #267b98;
 }
 /* Activity */
-  .banner-wrapper {
-    padding-top: 92px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    grid-gap: 0.5rem;
-    grid-template-areas:
-      "main main main main"
-      "left left right right";
-  }
-  .main-banner {
-    grid-area: main;
-    background-image: url("./img/main.avif");
-  }
-  .sub-banner-left {
-    grid-area: left;
-    background-image: url("./img/left.avif");
-  }
-  .sub-banner-right {
-    grid-area: right;
-    background-image: url("./img/right.avif");
-  }
-  .main-banner,
-  .sub-banner {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    /* 陰影處理 */
-    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-  }
-  .banner-title {
-    margin-bottom: 0.4rem;
-  }
-  .main-banner .banner-title {
-    font-size: 2rem;
-    color: #1a5366;
-  }
-  .banner-description {
-    margin-bottom: 1rem;
-    font-size: 600;
-  }
-  .main-banner .banner-description {
-    color: #267b98;
-    font-size: 1rem;
-  }
-  .sub-banner .action {
-    font-size: 1rem;
-    padding: 0.25rem 1rem;
-  }
-  .sub-banner .banner-title,
-  .sub-banner .banner-description{
-    color:#fff;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-
-  }
-
-
-
-
+.banner-wrapper {
+  padding-top: 92px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "main main main main"
+    "left left right right";
+}
+.main-banner {
+  grid-area: main;
+  background-image: url("./img/main.avif");
+}
+.sub-banner-left {
+  grid-area: left;
+  background-image: url("./img/left.avif");
+}
+.sub-banner-right {
+  grid-area: right;
+  background-image: url("./img/right.avif");
+}
+.main-banner,
+.sub-banner {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* 陰影處理 */
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+}
+.banner-title {
+  margin-bottom: 0.4rem;
+}
+.main-banner .banner-title {
+  font-size: 2rem;
+  color: #1a5366;
+}
+.banner-description {
+  margin-bottom: 1rem;
+  font-size: 600;
+}
+.main-banner .banner-description {
+  color: #267b98;
+  font-size: 1rem;
+}
+.sub-banner .action {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+}
+.sub-banner .banner-title,
+.sub-banner .banner-description {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
 
 /********* 電腦版樣式 *********/
 @media screen and (min-width: 768px) {
@@ -247,5 +242,28 @@ header {
     justify-content: end;
     align-items: center;
     grid-gap: 2rem;
+  }
+  /*  Activity  */
+  .banner-wrapper {
+    grid-gap: 1.5rem;
+    grid-template-areas:
+      "main main main left"
+      "main main main right";
+  }
+  .main-banner {
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .main-banner .banner-title {
+    font-size: 4rem;
+  }
+  .main-banner .banner-description {
+    font-size: 2rem;
+  }
+  .sub-banner .banner-title {
+    font-size: 2rem;
+  }
+  .sub-banner .action {
+    font-size: 1.2rem;
   }
 }
