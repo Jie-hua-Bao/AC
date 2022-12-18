@@ -82,6 +82,21 @@ header {
   position: absolute;
   top: 100%;
   width: 100%;
+  background: #ffffff;
+  /* 選取transform屬性 動畫時間0.3毫秒 ease-out變化速度 */
+  transition: transform 0.3s ease-out;
+  /* 從上方往下 */
+  transform-origin: top;
+  /* scale(x,y) */
+  transform: scale(1, 0);
+}
+.navbar-toggle:checked ~ .nav {
+  transform: scale(1, 1);
+}
+.navbar-toggle:checked ~ .nav .nav-item {
+  /* 延遲0.15秒在開始動畫 */
+  transition: opacity 0.2s ease-out 0.2s;
+  opacity: 1;
 }
 .navbar-brand {
   color: #267b98;
@@ -92,10 +107,12 @@ header {
 }
 .nav-item {
   margin: 1.4rem 0;
+  opacity: 0;
 }
 .nav-link {
   color: #267b98;
 }
+
 /********* 電腦版樣式 *********/
 @media screen and (min-width: 768px) {
   .action {
