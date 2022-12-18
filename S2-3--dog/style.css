@@ -98,6 +98,41 @@ header {
   transition: opacity 0.2s ease-out 0.2s;
   opacity: 1;
 }
+.navbar-toggle-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 7.5%;
+  display: flex;
+  align-items: center;
+}
+.hamburger {
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  background: #267b98;
+}
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  left: 0;
+  content: '';
+}
+.hamburger::before{
+  bottom: 8px;
+}
+.hamburger::after{
+  top: 8px;
+}
+.navbar-toggle{
+  visibility: hidden;
+  position: absolute;
+
+}
 .navbar-brand {
   color: #267b98;
   font-size: 1.5rem;
