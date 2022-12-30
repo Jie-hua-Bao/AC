@@ -92,73 +92,72 @@ $sizes: (
   25: 25%,
   50: 50%,
   75: 75%,
-  100: 100%
+  100: 100%,
 );
 
 /* 使用@each 產出css size設定 */
-@each $prop,$abbrev in (width:w,height:h){
-  @each $num,$val in $sizes{
-    .#{$abbrev}-#{$num}{
-      #{$prop}:$val;
-  }
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $num, $val in $sizes {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: $val;
+    }
   }
 }
 $spacer: 1rem;
 $spacers: (
   0: 0,
   1: (
-    $spacer * 0.25
+    $spacer * 0.25,
   ),
   2: (
-    $spacer * 0.5
+    $spacer * 0.5,
   ),
   3: (
-    $spacer * 0.75
+    $spacer * 0.75,
   ),
   4: $spacer,
   5: (
-    $spacer * 1.25
+    $spacer * 1.25,
   ),
   6: (
-    $spacer * 1.5
+    $spacer * 1.5,
   ),
   7: (
-    $spacer * 1.75
+    $spacer * 1.75,
   ),
   8: (
-    $spacer * 2
-  )
+    $spacer * 2,
+  ),
 );
 
 /* 使用@each 產出css spacer設定 */
-@each $prop, $abbrev in (margin:m ,padding: p){
+@each $prop, $abbrev in (margin: m, padding: p) {
   @each $num, $val in $spacers {
-  .#{$abbrev}-#{$num} {
+    .#{$abbrev}-#{$num} {
       #{$prop}: $val;
-  }
-  .#{$abbrev}t-#{$num} {
-    #{$prop}-top: $val;
-  }
-  .#{$abbrev}r-#{$num} {
-    #{$prop}-right: $val;
-  }
-  .#{$abbrev}b-#{$num} {
-    #{$prop}-bottom: $val;
-  }
-   .#{$abbrev}l-#{$num} {
-    #{$prop}-left: $val;
-  }
-   .#{$abbrev}x-#{$num} {
-     #{$prop}-left: $val;
-     #{$prop}-right: $val;
-  }
-   .#{$abbrev}y-#{$num} {
-     #{$prop}-top: $val;
-     #{$prop}-bottom: $val;
+    }
+    .#{$abbrev}t-#{$num} {
+      #{$prop}-top: $val;
+    }
+    .#{$abbrev}r-#{$num} {
+      #{$prop}-right: $val;
+    }
+    .#{$abbrev}b-#{$num} {
+      #{$prop}-bottom: $val;
+    }
+    .#{$abbrev}l-#{$num} {
+      #{$prop}-left: $val;
+    }
+    .#{$abbrev}x-#{$num} {
+      #{$prop}-left: $val;
+      #{$prop}-right: $val;
+    }
+    .#{$abbrev}y-#{$num} {
+      #{$prop}-top: $val;
+      #{$prop}-bottom: $val;
     }
   }
 }
-
 
 %standard-boxshadow {
   box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
@@ -281,30 +280,62 @@ nav {
     font-size: 26px;
   }
 }
+#main-app {
+  height: 100%;
+}
 
 #main-content {
+  height: 100%;
   margin-left: 60px;
-  display:flex;
+  display: flex;
 }
-.right-content{
-  flex:1;
+.right-content {
+  flex: 1;
 }
+
+.scrollbar {
+  padding-left: 6px;
+   // 卷軸整體樣式
+  &::-webkit-scrollbar {
+    width: 6px;
+    } 
+    // scrollbar的樣式
+  &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
 .card-list-panel {
-// grow 0 shrink 0 basis 250px  
-  flex:0 0 250px;
-  background-color:$white;
+  height: 100%;
+  // grow 0 shrink 0 basis 250px
+  flex: 0 0 250px;
+  background-color: $white;
   @extend %standard-boxshadow;
-  z-index:20;
+  z-index: 20;
+  overflow-y: scroll;
+  .flex-row {
+    display: flex;
+    align-items: center;
+  }
   .card {
-    width:200px;
-    margin-top:16px;
-    padding:8px;
-    border:1px solid #e0e0e0;
-    border-radius:5px;
-    box-shadow:0 2px 6px 0 rgba (0,0,0,0.09);
-    font-size:14px;
-    cursor:pointer;
-    opacity:0.5;
+    width: 200px;
+    margin-top: 16px;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 rgba (0, 0, 0, 0.09);
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.5;
+    // 滑鼠移過去以及點擊，呈現完整狀態
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+    &.active {
+      border-color: $light-gray;
+    }
     i {
       width: 20px;
       font-size: 16px;
@@ -326,4 +357,3 @@ nav {
     }
   }
 }
-
