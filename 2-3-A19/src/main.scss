@@ -284,10 +284,27 @@ nav {
 
 #main-content {
   margin-left: 60px;
+  display:flex;
 }
-
+.right-content{
+  flex:1;
+}
 .card-list-panel {
+// grow 0 shrink 0 basis 250px  
+  flex:0 0 250px;
+  background-color:$white;
+  @extend %standard-boxshadow;
+  z-index:20;
   .card {
+    width:200px;
+    margin-top:16px;
+    padding:8px;
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+    box-shadow:0 2px 6px 0 rgba (0,0,0,0.09);
+    font-size:14px;
+    cursor:pointer;
+    opacity:0.5;
     i {
       width: 20px;
       font-size: 16px;
