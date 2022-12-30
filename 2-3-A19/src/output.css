@@ -847,4 +847,26 @@ nav i {
   font-size: 18px;
 }
 
+.stepper-panel {
+  height: 120px;
+}
+.stepper-panel .stepper-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.step .circle-container {
+  height: 24px;
+  width: 24px;
+  background-color: #a7aaaf;
+  border-radius: 50%;
+  color: #4a4a4a;
+  margin: 0 auto;
+}
+.step .label-container {
+  margin-top: 10px;
+  color: #a7aaaf;
+}
+
 /*# sourceMappingURL=output.css.map */
