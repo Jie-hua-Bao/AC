@@ -912,6 +912,7 @@ nav i {
   background-color: #fff;
   padding: 32px 0;
   flex: 1;
+  overflow-y: scroll;
 }
 
 /*# sourceMappingURL=output.css.map */
