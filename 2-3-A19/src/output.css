@@ -904,8 +904,8 @@ nav i {
   background-color: #a7aaaf;
   position: absolute;
   top: 12px;
-  right: calc( 50% + 20px);
-  left: calc( -50% + 20px);
+  right: calc(50% + 20px);
+  left: calc(-50% + 20px);
 }
 
 .form-panel {
@@ -939,6 +939,14 @@ form .form-row input {
 form .form-row input:hover, form .form-row input:focus {
   border-color: #4a4a4a;
 }
+form .form-row input[type=checkbox], form .form-row input[type=radio] {
+  cursor: pointer;
+}
+form .form-row input[type=checkbox] ~ label, form .form-row input[type=radio] ~ label {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0;
+}
 form .form-row input[type=checkbox] {
   -webkit-appearance: none;
   border-radius: 3px;
@@ -955,16 +963,21 @@ form .form-row input[type=checkbox]:checked::after {
   font-size: 12px;
   color: #fff;
 }
-form .form-row input[type=checkbox]:focus {
+form .form-row input[type=radio] {
+  -webkit-appearance: none;
+  border-radius: 50%;
+}
+form .form-row input[type=radio]:checked {
+  box-shadow: inset 0 0 0 5px #3c88fd;
+}
+form .form-row input[type=radio] ~ label {
+  margin-right: 20px;
+}
+form .form-row input:focus {
   border-color: #a7aaaf;
 }
-form .form-row input[type=checkbox]:hover {
+form .form-row input:hover {
   border-color: #4a4a4a;
-}
-form .form-row input[type=checkbox] ~ label {
-  display: inline-block;
-  font-weight: normal;
-  margin: 0;
 }
 
 /*# sourceMappingURL=output.css.map */
