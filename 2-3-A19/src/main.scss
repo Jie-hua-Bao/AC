@@ -158,7 +158,13 @@ $spacers: (
     }
   }
 }
-
+@mixin getStepNums($num) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) .circle-container::after {
+      content: "#{$i}";
+    }
+  }
+}
 %standard-boxshadow {
   box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
 }
@@ -295,16 +301,16 @@ nav {
 
 .scrollbar {
   padding-left: 6px;
-   // 卷軸整體樣式
+  // 卷軸整體樣式
   &::-webkit-scrollbar {
     width: 6px;
-    } 
-    // scrollbar的樣式
-  &::-webkit-scrollbar-thumb {
-      border-radius: 3px;
-      background-color: rgba(0, 0, 0, 0.1);
-    }
   }
+  // scrollbar的樣式
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
 
 .card-list-panel {
   height: 100%;
@@ -357,25 +363,55 @@ nav {
     }
   }
 }
-.stepper-panel{
+.stepper-panel {
   height: 120px;
-  .stepper-container{
+  padding-top: 40px;
+  .stepper-container {
     width: 80%;
     margin: 0 auto;
     display: flex;
   }
 }
-.step{
-  .circle-container{
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  @include getStepNums(3);
+  .circle-container {
     height: 24px;
     width: 24px;
+    // 數字置中
+    line-height: 24px;
     background-color: $light-gray;
     border-radius: 50%;
-    color:$dark-gray;
+    color: $dark-gray;
     margin: 0 auto;
   }
-  .label-container{
+  .label-container {
     margin-top: 10px;
-    color:$light-gray;
+    color: $light-gray;
+  }
+  &.checked .circle-container::after {
+    content: "\2714";
+  }
+  &.checked,&.active {
+    .circle-container {
+      background-color: $freedom-blue;
+      color: $body-color;
+    }
+    .label-container {
+      color: $body-color;
+    }
+  }
+  .connect-line {
+    display: block;
+    height: 1px;
+    background-color:$light-gray;
+    position: absolute;
+    top: 12px;
+    right:calc( 50% + 20px);
+    left:calc( -50% + 20px);
+    ;
   }
 }
+

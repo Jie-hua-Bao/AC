@@ -849,6 +849,7 @@ nav i {
 
 .stepper-panel {
   height: 120px;
+  padding-top: 40px;
 }
 .stepper-panel .stepper-container {
   width: 80%;
@@ -856,9 +857,24 @@ nav i {
   display: flex;
 }
 
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.step:nth-child(1) .circle-container::after {
+  content: "1";
+}
+.step:nth-child(2) .circle-container::after {
+  content: "2";
+}
+.step:nth-child(3) .circle-container::after {
+  content: "3";
+}
 .step .circle-container {
   height: 24px;
   width: 24px;
+  line-height: 24px;
   background-color: #a7aaaf;
   border-radius: 50%;
   color: #4a4a4a;
@@ -867,6 +883,25 @@ nav i {
 .step .label-container {
   margin-top: 10px;
   color: #a7aaaf;
+}
+.step.checked .circle-container::after {
+  content: "✔";
+}
+.step.checked .circle-container, .step.active .circle-container {
+  background-color: #02b8ff;
+  color: #18253d;
+}
+.step.checked .label-container, .step.active .label-container {
+  color: #18253d;
+}
+.step .connect-line {
+  display: block;
+  height: 1px;
+  background-color: #a7aaaf;
+  position: absolute;
+  top: 12px;
+  right: calc( 50% + 20px);
+  left: calc( -50% + 20px);
 }
 
 /*# sourceMappingURL=output.css.map */
