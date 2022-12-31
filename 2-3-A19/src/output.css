@@ -979,6 +979,9 @@ form .form-row input[type=date] {
 form .form-row input[type=date]:invalid {
   color: #747474;
 }
+form .form-row input[type=number] {
+  width: 60px;
+}
 form .form-row input:focus {
   border-color: #a7aaaf;
 }

@@ -129,9 +129,16 @@
                       ><input
                         id="a-time-start"
                         name="a-time-start"
-                        type="date"  required
+                        type="date"
+                        required
                       />
-                      - <input id="a-time-end" name="a-time-end" type="date" required />
+                      -
+                      <input
+                        id="a-time-end"
+                        name="a-time-end"
+                        type="date"
+                        required
+                      />
                     </div>
                     <div class="form-row">
                       <label>廣告類別</label>
@@ -167,8 +174,9 @@
                       </div>
                     </div>
                     <div class="form-row">
-                      <label for="">受眾年齡</label><input type="number" /> -
-                      <input type="number" />
+                      <label for="">受眾年齡</label
+                      ><input type="number" min="13" max="65" value="13" /> -
+                      <input type="number" min="13" max="65" value="65" />
                     </div>
                     <div class="form-row">
                       <label for="">受眾地點</label>
