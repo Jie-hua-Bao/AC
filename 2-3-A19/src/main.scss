@@ -297,6 +297,12 @@ nav {
 }
 .right-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  .container{
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .scrollbar {
@@ -367,8 +373,6 @@ nav {
   height: 120px;
   padding-top: 40px;
   .stepper-container {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
   }
 }
@@ -413,5 +417,11 @@ nav {
     left:calc( -50% + 20px);
     ;
   }
+}
+.form-panel{
+  @extend %standard-boxshadow;
+  background-color:$white;
+  padding: 32px 0;
+  flex: 1;
 }
 
