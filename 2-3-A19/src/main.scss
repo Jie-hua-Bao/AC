@@ -448,6 +448,33 @@ form{
       &:hover,&:focus{
         border-color: $dark-gray;
       }
+      &[type="checkbox"]{
+       -webkit-appearance:none;
+       border-radius: 3px;
+       position: relative;
+       &:checked{
+        background-color:$secondary-blue;
+        &::after{
+          content:'\2714';
+          position: absolute;
+          top: 0;
+          left: 3px;
+          font-size: 12px;
+          color:$white;
+        }
+       }
+       &:focus{
+        border-color: $light-gray;
+       }
+       &:hover{
+        border-color: $dark-gray;
+       }
+       ~label{
+        display: inline-block;
+        font-weight: normal;
+        margin: 0;
+       }
+      }
     }
   }
 }
