@@ -424,5 +424,31 @@ nav {
   padding: 32px 0;
   flex: 1;
   overflow-y: scroll;
+  .terms-panel{
+    max-height: 300px;
+    padding: 16px;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    overflow-y: scroll;
+  }
+}
+form{
+  .form-row{
+    margin-bottom: 24px;
+    >label{
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 800;
+    }
+    input{
+      border: 1px solid $light-gray;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 0.5rem;
+      &:hover,&:focus{
+        border-color: $dark-gray;
+      }
+    }
+  }
 }
 

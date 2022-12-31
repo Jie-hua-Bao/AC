@@ -914,5 +914,30 @@ nav i {
   flex: 1;
   overflow-y: scroll;
 }
+.form-panel .terms-panel {
+  max-height: 300px;
+  padding: 16px;
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+form .form-row {
+  margin-bottom: 24px;
+}
+form .form-row > label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+form .form-row input {
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0.5rem;
+}
+form .form-row input:hover, form .form-row input:focus {
+  border-color: #4a4a4a;
+}
 
 /*# sourceMappingURL=output.css.map */
