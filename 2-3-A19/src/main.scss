@@ -484,6 +484,13 @@ form {
           margin-right: 20px;
         }
       }
+      &[type="date"]{
+        cursor: pointer;
+        // 檢查有無填入資料
+        &:invalid {
+          color:#747474;
+        }
+      }
       &:focus {
         border-color: $light-gray;
       }

@@ -973,6 +973,12 @@ form .form-row input[type=radio]:checked {
 form .form-row input[type=radio] ~ label {
   margin-right: 20px;
 }
+form .form-row input[type=date] {
+  cursor: pointer;
+}
+form .form-row input[type=date]:invalid {
+  color: #747474;
+}
 form .form-row input:focus {
   border-color: #a7aaaf;
 }
