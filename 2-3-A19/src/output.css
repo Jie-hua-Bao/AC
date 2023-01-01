@@ -833,7 +833,7 @@ nav i {
   padding: 8px;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
-  box-shadow: 0 2px 6px 0 rgba 0, 0, 0, 0.09;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.09);
   font-size: 14px;
   cursor: pointer;
   opacity: 0.5;
@@ -872,9 +872,9 @@ nav i {
 }
 
 .step {
+  position: relative;
   flex: 1;
   text-align: center;
-  position: relative;
 }
 .step:nth-child(1) .circle-container::after {
   content: "1";
@@ -1008,7 +1008,7 @@ form .form-row .select-wrapper {
 form .form-row .select-wrapper::after {
   content: "";
   border-style: solid;
-  border: 6px 5px 0px 6px;
+  border-width: 6px 5px 0 5px;
   border-color: #a7aaaf transparent transparent transparent;
   position: absolute;
   top: 50%;
@@ -1038,8 +1038,8 @@ form .form-row textarea {
   box-shadow: 1px 1px 5px #a6a6a6;
 }
 .btn.btn-primary {
-  background-color: #3c88fd;
   color: #fff;
+  background-color: #3c88fd;
 }
 .btn.btn-outline {
   color: #4a4a4a;
