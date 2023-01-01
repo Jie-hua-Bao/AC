@@ -34,11 +34,11 @@
         <div class="right-content">
           <div id="step-control" class="stepper-panel">
             <div class="container stepper-container">
-              <div class="step checked">
+              <div class="step active">
                 <div class="circle-container"></div>
                 <div class="label-container">啟用廣告服務</div>
               </div>
-              <div class="step active">
+              <div class="step">
                 <div class="circle-container"></div>
                 <span class="connect-line"></span>
                 <div class="label-container">廣告設定</div>
@@ -123,7 +123,7 @@
                       >
                     </div>
                   </div>
-                  <div class="part">
+                  <div class="part d-none">
                     <div class="form-row">
                       <label>廣告走期</label
                       ><input
@@ -143,7 +143,7 @@
                     <div class="form-row">
                       <label>廣告類別</label>
                       <div class="select-wrapper">
-                        <select name="a-type" id="a-type" required >
+                        <select name="a-type" id="a-type" required>
                           <option value="" disabled selected>
                             請選擇廣告類別
                           </option>
@@ -196,7 +196,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="part">
+                  <div class="part d-none">
                     <div class="form-row">
                       <label for="">銀行代碼</label
                       ><input
@@ -222,13 +222,21 @@
                       />
                     </div>
                     <div class="form-row">
-                      <label for="">備註</label><textarea id="note" rows="3" class="scrollbar"></textarea>
+                      <label for="">備註</label
+                      ><textarea
+                        id="note"
+                        rows="3"
+                        class="scrollbar"
+                      ></textarea>
                     </div>
                   </div>
                 </div>
-                <div id="btn-control" class="control-panel">
-                  <button>上一步</button>
-                  <button>下一步</button>
+                <div
+                  id="btn-control"
+                  class="control-panel d-flex justify-content-end"
+                >
+                  <button disabled class="btn btn-outline">上一步</button>
+                  <button class="btn btn-primary ml-4">下一步</button>
                 </div>
               </form>
             </div>

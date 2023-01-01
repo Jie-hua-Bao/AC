@@ -931,6 +931,17 @@ nav i {
   border-radius: 5px;
   overflow-y: scroll;
 }
+.form-panel .form-container {
+  height: 100%;
+}
+.form-panel .form-container form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-panel .form-container form .form-content {
+  flex: 1;
+}
 
 form .form-row {
   margin-bottom: 24px;
@@ -1017,6 +1028,27 @@ form .form-row select:invalid {
 form .form-row textarea {
   resize: none;
   overflow-y: scroll;
+}
+
+.btn {
+  font-size: 16px;
+  border-radius: 5px;
+  height: 32px;
+  padding: 0 16px;
+  box-shadow: 1px 1px 5px #a6a6a6;
+}
+.btn.btn-primary {
+  background-color: #3c88fd;
+  color: #fff;
+}
+.btn.btn-outline {
+  color: #4a4a4a;
+}
+.btn:hover {
+  box-shadow: 1px 1px 5px #4a4a4a;
+}
+.btn[disabled] {
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=output.css.map */
