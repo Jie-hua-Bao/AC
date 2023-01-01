@@ -168,6 +168,16 @@ $spacers: (
 %standard-boxshadow {
   box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
 }
+%input-style {
+   border: 1px solid $light-gray;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 0.5rem;
+      &:hover,
+      &:focus {
+        border-color: $dark-gray;
+      }
+}
 
 html {
   font-size: 16px;
@@ -441,14 +451,7 @@ form {
       font-weight: 800;
     }
     input {
-      border: 1px solid $light-gray;
-      border-radius: 5px;
-      font-size: 16px;
-      padding: 0.5rem;
-      &:hover,
-      &:focus {
-        border-color: $dark-gray;
-      }
+    @extend %input-style;
       &[type="checkbox"],
       &[type="radio"] {
         cursor: pointer;
@@ -499,6 +502,33 @@ form {
       }
       &:hover {
         border-color: $dark-gray;
+      }
+    }
+    .select-wrapper{
+      position: relative;
+      width: 25%;
+      z-index: 0;
+      &::after{
+        // content:'\25bE';
+        content:'';
+        border-style: solid;
+        border: 6px 5px 0px 6px;
+        border-color: $light-gray transparent transparent transparent;
+        position: absolute;
+        top:50%;
+        right: 8px;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+    select{
+      @extend %input-style; 
+      -webkit-appearance:none;
+      cursor: pointer;
+      width: 100%;
+      background-color: transparent;
+      &:invalid{
+        color:#747474;
       }
     }
   }

@@ -658,6 +658,16 @@ input:invalid {
   box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
 }
 
+form .form-row select, form .form-row input {
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0.5rem;
+}
+form .form-row select:hover, form .form-row input:hover, form .form-row select:focus, form .form-row input:focus {
+  border-color: #4a4a4a;
+}
+
 html {
   font-size: 16px;
   height: 100%;
@@ -930,15 +940,6 @@ form .form-row > label {
   margin-bottom: 6px;
   font-weight: 800;
 }
-form .form-row input {
-  border: 1px solid #a7aaaf;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 0.5rem;
-}
-form .form-row input:hover, form .form-row input:focus {
-  border-color: #4a4a4a;
-}
 form .form-row input[type=checkbox], form .form-row input[type=radio] {
   cursor: pointer;
 }
@@ -987,6 +988,31 @@ form .form-row input:focus {
 }
 form .form-row input:hover {
   border-color: #4a4a4a;
+}
+form .form-row .select-wrapper {
+  position: relative;
+  width: 25%;
+  z-index: 0;
+}
+form .form-row .select-wrapper::after {
+  content: "";
+  border-style: solid;
+  border: 6px 5px 0px 6px;
+  border-color: #a7aaaf transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+form .form-row select {
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+}
+form .form-row select:invalid {
+  color: #747474;
 }
 
 /*# sourceMappingURL=output.css.map */
