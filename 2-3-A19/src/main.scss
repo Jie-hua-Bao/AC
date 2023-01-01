@@ -531,5 +531,10 @@ form {
         color:#747474;
       }
     }
+    textarea{
+      @extend %input-style;
+      resize: none;
+      overflow-y: scroll;
+    }
   }
 }
