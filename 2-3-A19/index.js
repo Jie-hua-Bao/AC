@@ -80,8 +80,8 @@ const btnControl = document.getElementById("btn-control");
 const nextBtn = btnControl.querySelector(".btn-primary");
 const prevBtn = btnControl.querySelector(".btn-outline");
 
-let activeCard = 0;
-let step = 0;
+let activeCard = 0; // 點擊的卡片位置
+let step = 0;//該階段的狀態
 
 (function () {
   influencers.forEach((influencer) => {
@@ -100,7 +100,7 @@ let step = 0;
           influencer.ig
         }</span></div>
         </div>
-     `;
+`;
   });
 })();
 
@@ -108,10 +108,10 @@ function handleCardClicked({ target }) {
   const cards = cardList.querySelectorAll(".card");
   const node = target.closest(".card");
   if (node) {
-    const idArr = node.id.split("-");
-    const num = Number(idArr[idArr.length - 1]);
-    cards[activeCard].classList.remove("active");
-    cards[num - 1].classList.add("active");
+    const idArr = node.id.split("-"); // 分開名字與id數字，從 - 區分
+    const num = Number(idArr[idArr.length - 1]); // idArr 取id數字索引位置為 1，lenght數為2 所以-1
+    cards[activeCard].classList.remove("active"); // 預設的卡片初始位置
+    cards[num - 1].classList.add("active"); // 取出符合的id數字-1 為卡片點取位置
     activeCard = num - 1;
   }
 }
@@ -137,6 +137,7 @@ function handleBtnControlClicked(e) {
     step -= 1;
   }
   setBtnDisabled();
+  console.log(nowStep);
 }
 
 function setBtnDisabled() {

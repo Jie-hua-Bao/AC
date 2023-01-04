@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+}
+
+/*共用按鈕樣式*/
+.action {
+  color: white;
+  background: #39bae6;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  transition: all 0.1s linear;
+}
+
+.action:hover {
+  background: #267c99;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+}
+
+.background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* end css reset */
+
+/* phone */
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 40px;
+  background: rgb(255, 255, 255, 0.8);
+}
+.navbar {
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-logo-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+.shop-logo-img {
+  height: 30px;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.tshirt-category,
+.serach-icon.serach-icon-lg {
+  display: none;
+}
+i {
+  font-size: 25px;
+}
+sup {
+  font-size: 10px;
+}
+.heart-icon {
+  margin-right: 0.5rem;
+}
+.header-bottom {
+  position: relative;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  top: 45px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.shop-container-title {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+.select-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+select {
+  width: 45%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 15px;
+  background: #fff;
+}
+
+.t-shirt-size {
+  margin-right: 15px;
+}
+.shop-tshirt-list {
+  width: 100%;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-gap: 1rem;
+}
+
+.shop-item {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.fa-regular.fa-heart.shirt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.tshirt-img-div {
+  position: relative;
+  width: 100%;
+}
+
+.t-shirt-img {
+  width: 100%;
+}
+.t-shirt-img.model {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-quantity {
+  padding-top: 5rem;
+  text-align: center;
+}
+.shop-web-sub {
+  background-color: #ededed;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.sub-title {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  line-height: 25px;
+}
+.sub-script {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.sub-input {
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  margin-right: 0;
+  text-align: center;
+}
+.sub-input:focus,
+.sumbit:focus,
+select:focus {
+  outline: none;
+}
+.sumbit {
+  width: 25%;
+  height: 40px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
+  margin-left: 0;
+  font-weight: 700;
+}
+.sub-policy {
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 30px 0 50px;
+  letter-spacing: 1px;
+}
+.sub-policy-link {
+  text-decoration: underline;
+}
+.shop-footer {
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #dedede;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+/* after & after */
+.sold-out {
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.sold-out::before {
+  content: "Sold Out";
+  text-decoration: none;
+  margin-right: 0.3rem;
+}
+
+/* hover */
+.shop-item:hover .t-shirt-img.model {
+  opacity: 1;
+  cursor: pointer;
+}
+.sumbit {
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .select-list {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  select {
+    width: 100%;
+  }
+  .t-shirt-size,
+  .t-shirt-color {
+    margin-right: 2rem;
+  }
+  .shop-tshirt-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .sub-info {
+    background-image: url("./img/05.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .sub-script {
+    width: 60%;
+  }
+  .serach-icon.serach-icon-lg {
+    display: none;
+  }
+}
+@media screen and (min-width: 960px) {
+  header {
+    height: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 2px 12px 0px rgba(247, 243, 243, 0.2);
+  }
+  .header-bottom {
+    padding-top: 2rem;
+  }
+  .select-list {
+    width: 50%;
+  }
+  .shop-tshirt-list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+  .shop-container-title {
+    font-size: 2.5rem;
+  }
+  .fa-regular.fa-heart.shirt {
+    font-size: 2.5rem;
+  }
+  .sub-script {
+    width: 50%;
+  }
+  .shop-web-sub {
+    width: 80%;
+  }
+  .navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .serach-icon {
+    display: none;
+  }
+  .tshirt-category {
+    display: flex;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .tshirt-category h2 {
+    margin-right: 5rem;
+  }
+  .icon-list {
+    display: flex;
+  }
+  .container {
+    max-width: 1600px;
+    width: 90%;
+    padding-top: 3rem;
+  }
+  .shop-logo-img {
+    height: 50px;
+  }
+  .shop-logo-title h2 {
+    font-size: 1.5rem;
+  }
+  .navbar i {
+    font-size: 30px;
+  }
+  .serach-icon.serach-icon-lg {
+    display: block;
+  }
+  .fa-regular.fa-heart.shirt {
+    font-size: 1.3rem;
+  }
+  .heart-icon {
+    margin: 0 1rem;
+  }
+  .shop-container-title{
+    font-size: 1.5rem;
+  }
+}
