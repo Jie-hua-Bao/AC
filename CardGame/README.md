@@ -1,5 +1,5 @@
 <img src="./voice/readme.gif">
-URL:https://github.com/Jie-hua-Bao/AC/tree/main/CardGame <br>
+URL:https://jie-hua-bao.github.io/AC/CardGame/ <br>
 
 這是我介面優化後的翻牌遊戲 <br>
 新增了 背景音樂 音效 <br>
